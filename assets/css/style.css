@@ -12,6 +12,11 @@ body{
     justify-content: center;
 }
 
+h1{
+    font-size: 2.0rem;
+    margin: 20px;
+}
+
 .title{
     display: flex;
     flex-direction: column;
@@ -19,26 +24,38 @@ body{
     align-items: center;
 }
 
-.title:hover{
-
-}
-
 .box{
-    background-color: wheat;
     color: tomato;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: 40vw;
+}
+
+.box__li button{
+    list-style: none;
+    margin: 5px;
+    width: 60px;
+    height: 30px;
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    text-align: center;
+    background-color:black;
+    color: var(--color-white);
+}
+
+.box__li button:hover{
+    background-color:var(--color-white);
+    color: black;
 }
 
 .result{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /* flex-direction: column; */
     margin-top: 10px;
-    width: 80vw;
-    background-color: var(--color-white);
-    color: black;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
 }
