@@ -11,103 +11,118 @@ const showResults = (element) => {
 }
 
 const kata1 = () => {
-    showResults(gotCitiesCSV.split(','));
-    return gotCitiesCSV.split(',');
+    let copyArr = gotCitiesCSV.slice();
+    showResults(copyArr.split(','));
+    return copyArr.split(',');
 }
 
 const kata2 = () => {
-    showResults(bestThing.split(' '));
-    return bestThing.split(' ');
+    let copyArr = bestThing.slice();
+    showResults(copyArr.split(' '));
+    return copyArr.split(' ');
 }
 
 const kata3 = () => {
-    showResults(gotCitiesCSV.replace(/[,]/g, ";"));
-    return gotCitiesCSV.replace(/[,]/g, ";");
+    let copyArr = gotCitiesCSV.slice();
+    showResults(copyArr.replace(/[,]/g, ";"));
+    return copyArr.replace(/[,]/g, ";");
 }
 
 const kata4 = () => {
-    showResults(lotrCitiesArray.join(','));
-    return lotrCitiesArray.join(',');
+    let copyArr = lotrCitiesArray.slice();
+    showResults(copyArr.join(','));
+    return copyArr.join(',');
 }
 
 const kata5 = () => {
+    let copyArr = lotrCitiesArray.slice();
     let arrResult = [];
     for (let i = 0; i < 5; i++) {
-        arrResult.push(lotrCitiesArray[i]);
+        arrResult.push(copyArr[i]);
     }
     showResults(arrResult);
     return arrResult;
 }
 
 const kata6 = () => {
-    let arrCopy = lotrCitiesArray;
+    let copyArr = lotrCitiesArray.slice();
     let arrResult = [];
     for (let i = 0; i < 5; i++) {
-        arrResult.push(arrCopy.pop());
+        arrResult.push(copyArr.pop());
     }
     showResults(arrResult);
     return arrResult;
 }
 
 const kata7 = () => {
+    let copyArr = lotrCitiesArray.slice();
     let arrResult = [];
     for (let i = 2; i <= 4; i++) {
-        arrResult.push(lotrCitiesArray[i]);
+        arrResult.push(copyArr[i]);
     }
     showResults(arrResult);
     return arrResult;
 }
 
 const kata8 = () => {
-    let element = lotrCitiesArray.splice(lotrCitiesArray.indexOf('Rohan'),1);
-    showResults(lotrCitiesArray);
-    return lotrCitiesArray;
+    let copyArr = lotrCitiesArray.slice();
+    copyArr.splice(copyArr.indexOf('Rohan'),1);
+    showResults(copyArr);
+    return copyArr;
 }
 
 const kata9 = () => {
-    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Dead Marshes')  + 1);
-    showResults(lotrCitiesArray);
-    return lotrCitiesArray;
+    let copyArr = lotrCitiesArray.slice();
+    copyArr.splice(copyArr.indexOf('Dead Marshes')  + 1);
+    showResults(copyArr);
+    return copyArr;
 }
 
 const kata10 = () => {
-    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Gondor') + 1,0,'Rohan');
-    showResults(lotrCitiesArray)
-    return lotrCitiesArray;
+    let copyArr = lotrCitiesArray.slice();
+    copyArr.splice(copyArr.indexOf('Gondor') + 1,0,'Rohan');
+    showResults(copyArr)
+    return copyArr;
 }
 
 const kata11 = () => {
-    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Dead Marshes'),1,'Deadest Marshes');
-    showResults(lotrCitiesArray)
-    return lotrCitiesArray;
+    let copyArr = lotrCitiesArray.slice();
+    copyArr.splice(copyArr.indexOf('Dead Marshes'),1,'Deadest Marshes');
+    showResults(copyArr)
+    return copyArr;
 }
 
 const kata12 = () => {
-    let element = bestThing.slice(0,14)
+    let copyArr = bestThing.slice();
+    let element = copyArr.slice(0,14)
     showResults(element);
     return element;
 }
 
 const kata13 = () => {
-    let element = bestThing.slice(bestThing.length - 12)
+    let copyArr = bestThing.slice();
+    let element = copyArr.slice(copyArr.length - 12)
     showResults(element);
     return element;
 }
 
 const kata14 = () => {
-    let element = bestThing.slice(23,28)
+    let copyArr = bestThing.slice();
+    let element = copyArr.slice(23,28)
     showResults(element);
     return element;
 }
 
 const kata15 = () => {
-    let element = bestThing.substring(bestThing.length - 12)
+    let copyArr = bestThing.slice();
+    let element = copyArr.substring(copyArr.length - 12)
     showResults(element);
     return element;
 }
 
 const kata16 = () => {
-    let element = bestThing.substring(23,28)
+    let copyArr = bestThing.slice();
+    let element = copyArr.substring(23,28)
     showResults(element);
     return element;
 }
