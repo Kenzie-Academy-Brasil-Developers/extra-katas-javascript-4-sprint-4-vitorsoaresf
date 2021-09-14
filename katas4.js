@@ -46,10 +46,7 @@ const kata5 = () => {
 
 const kata6 = () => {
     let copyArr = lotrCitiesArray.slice();
-    let arrResult = [];
-    for (let i = 0; i < 5; i++) {
-        arrResult.push(copyArr.pop());
-    }
+    let arrResult = copyArr.splice(copyArr.length - 5,5);
     showResults(arrResult);
     return arrResult;
 }
@@ -65,31 +62,27 @@ const kata7 = () => {
 }
 
 const kata8 = () => {
-    let copyArr = lotrCitiesArray.slice();
-    copyArr.splice(copyArr.indexOf('Rohan'),1);
-    showResults(copyArr);
-    return copyArr;
+    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Rohan'),1);
+    showResults(lotrCitiesArray);
+    return lotrCitiesArray;
 }
 
 const kata9 = () => {
-    let copyArr = lotrCitiesArray.slice();
-    copyArr.splice(copyArr.indexOf('Dead Marshes')  + 1);
-    showResults(copyArr);
-    return copyArr;
+    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Dead Marshes')  + 1);
+    showResults(lotrCitiesArray);
+    return lotrCitiesArray;
 }
 
 const kata10 = () => {
-    let copyArr = lotrCitiesArray.slice();
-    copyArr.splice(copyArr.indexOf('Gondor') + 1,0,'Rohan');
-    showResults(copyArr)
-    return copyArr;
+    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Gondor') + 1,0,'Rohan');
+    showResults(lotrCitiesArray)
+    return lotrCitiesArray;
 }
 
 const kata11 = () => {
-    let copyArr = lotrCitiesArray.slice();
-    copyArr.splice(copyArr.indexOf('Dead Marshes'),1,'Deadest Marshes');
-    showResults(copyArr)
-    return copyArr;
+    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Dead Marshes'),1,'Deadest Marshes');
+    showResults(lotrCitiesArray)
+    return lotrCitiesArray;
 }
 
 const kata12 = () => {
