@@ -74,7 +74,9 @@ const kata9 = () => {
 }
 
 const kata10 = () => {
-    lotrCitiesArray.splice(lotrCitiesArray.indexOf('Gondor') + 1,0,'Rohan');
+    if(!lotrCitiesArray.includes('Rohan')){
+        lotrCitiesArray.splice(lotrCitiesArray.indexOf('Gondor') + 1,0,'Rohan');
+    }
     showResults(lotrCitiesArray)
     return lotrCitiesArray;
 }
@@ -101,7 +103,7 @@ const kata13 = () => {
 
 const kata14 = () => {
     let copyArr = bestThing.slice();
-    let element = copyArr.slice(23,28)
+    let element = copyArr.slice(23,38)
     showResults(element);
     return element;
 }
